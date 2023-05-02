@@ -82,6 +82,13 @@ public class app {
                         if(credito.getFaturDoMes()< 0) {
                             System.out.println("Sua fatura esta zerada.");
                         }else{
+                            System.out.println("Sua fatura está: "+ credito.getFaturDoMes()+"\n Deseja pagar agora? \n 1 -Sim \n 2 - Não");
+                            int escolhaPagar = Integer.parseInt(scanner.nextLine());
+                            if(escolhaPagar == 1){
+                                credito.PagarFatura(142.00);
+
+                            }
+
 
                         }
 
