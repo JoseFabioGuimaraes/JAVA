@@ -19,12 +19,13 @@ public class app {
         String senha = scanner.nextLine();
 
         // o que o usuario quer acessar (case)
+        // TODO: 27/05/2023 : criar um array com algumas contas setadas. (Não sei se vai dar tempo.)
         ContaCorrente minhaConta = new ContaCorrente(Usuario,numConta,senha);
         ContaTransferencia transferencia = new ContaTransferencia(minhaConta.getUsuario(), minhaConta.getNumeroConta(), minhaConta.getUsuario());
         Credito credito = new Credito(minhaConta.getUsuario(), minhaConta.getNumeroConta(), minhaConta.getUsuario());
         System.out.println("Seu saldo é de: " + minhaConta.getSaldo());
 
-
+        //TODO: Criar um acesso diferente para as funções Conta corrente e suas herenças, Poupança  e Investimento
         while (true){
             System.out.print("Qual ação gostaria de fazer: \n 1- Ações para Conta Corrente \n 2- Tranferência \n 3- Opções de Credito \n 6- Sair \n");
             int escolha = Integer.parseInt(scanner.nextLine());
